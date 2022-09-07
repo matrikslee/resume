@@ -4,59 +4,68 @@
 
 \documentclass{resume}
 \usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
-% \usepackage{NotoSansSC_external}
-% \usepackage{NotoSerifCJKsc_external}
-% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
+\setlength{\baselineskip}{21.7pt}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{你的大名}
+\name{李成}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
- 
-\section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{上海交通大学}, 上海}{2013 -- 至今}
-\textit{在读硕士研究生}\ 信息与通信工程, 预计 2016 年 3 月毕业
-\datedsubsection{\textbf{西安电子科技大学}, 西安, 陕西}{2009 -- 2013}
-\textit{学士}\ 通信工程
+  \email{im.lechain@gmail.com} \textperiodcentered\ 
+  \phone{(+86) 133-7470-7978} \textperiodcentered\ 
+  \github[github.com/matrikslee]{https://github.com/matrikslee}}
 
-\section{\faUsers\ 实习/项目经历}
-\datedsubsection{\textbf{黑科技公司} 上海}{2015年3月 -- 2015年5月}
-\role{实习}{经理: 高富帅}
-xxx后端开发
+\section{\faGraduationCap\ 教育背景}
+\datedsubsection{\textbf{中国海洋通大学}, 青岛}{2014/9 -- 2018/6}
+\textit{学士}\ ——工程学院——自动化专业
+
+\section{\faUsers\ 工作经历/项目经历}
+\datedsubsection{\textbf{联发软件设计（深圳）有限公司} }{2019年4月 -- 2022年4月}
+\role{嵌入式软件工程师}{linux kernel 下的 platform/device driver 开发}
+
+2021~2022：ARM64 平台的 Linux 标准内核模块开发
 \begin{itemize}
-  \item 实现了 xxx 特性
-  \item 后台资源占用率减少8\%
-  \item xxx
+  \item Arm64 平台 kernel 模块标准 device driver 的开发经验，主要是 v4l2 device，
+  \item 了解 dma\_buf, mmap 等 kernel 基础设施的用途及使用场景，并有一定的编码经验，
+  \item 内核模块代码在 x86(x64) 平台下的 google test 单元测试环境搭建，使用 stub/mock 方法，
+  \item 理解操作系统调用，有用户空间与内核空间程序交互的编码实践及调试经验，有 device driver 的用户空间设备接口以及系统 sysfs 接口的实现经验。
 \end{itemize}
 
-\datedsubsection{\textbf{分布式科学上网姿势}}{2014年6月 -- 至今}
-\role{Golang, Linux}{个人项目，和富帅糕合作开发}
-\begin{onehalfspacing}
-分布式负载均衡科学上网姿势, https://github.com/cyfdecyf/cow
+2019 年 4 月——2021 年：Mediatek 8K 高端 TV 芯片的 HDMI 设备驱动开发与维护
 \begin{itemize}
-  \item 修复了连接未正常关闭导致文件描述符耗尽的 bug
-  \item 使用Chord 哈希 URL, 实现稳定可靠地分流
-  \item xxx (尽量使用量化的客观结果)
+  \item Arm64 平台的内存、寄存器和中断模型认知，linux kernel 环境的编码经验，
+  \item IC 验证之后的公版驱动软件开发维护，处理内部公版测试中的驱动软件 bug，
+  \item 客户项目的客户支持及 BUG 处理，并取得若干内部 Award 奖励，
+  \item 熟悉HDMI 规范：TMDS/FRL 信号传输协议，Video制式标准等。
 \end{itemize}
-\end{onehalfspacing}
 
-\datedsubsection{\textbf{\LaTeX\ 简历模板}}{2015 年5月 -- 至今}
-\role{\LaTeX, Python}{个人项目}
-\begin{onehalfspacing}
-优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
+\datedsubsection{\textbf{索尼精密部件（惠州）有限公司}}{2018年7月 -- 2019年4月}
+\role{嵌入式软件工程师}{工厂产线嵌入式设备及其上位机软件开发与维护}
+1.参与支持新产品线的研发，
 \begin{itemize}
-  \item 容易定制和扩展
-  \item 完善的 Unicode 字体支持，使用 \XeLaTeX\ 编译
-  \item 支持 FontAwesome 4.5.0
+  \item 按要求修改嵌入式设备源代码，编辑烧录运行，
+  \item 收集和处理生产线设备数据，并根据数据报告针对性调整设备参数，
 \end{itemize}
-\end{onehalfspacing}
+2.自行开发了用于生产线设备通信控制的上位机程序，用于调试与数据采集
+\begin{itemize}
+  \item 基于事件的串口文本异步接收，基于C\#和WinForm实现用户界面，
+  \item 实现收发文本的编码转换 (ASCII，Unicode，UTF-8)，以及日志存储功能。
+\end{itemize}
+
+\datedsubsection{\textbf{ 中国海洋大学}}{2015 年10月 -- 2017年8月}
+\role{单片机 C 语言开发}{参赛项目：基于单片机的两轮自平衡小车}
+本项目是单片机裸机程序，在单片机厂商提供的基础代码库上开发。作为软硬件综合团队项目，队友负责硬件 PCB 设计等，本人负责 C 代码的编写和维护，构建程序框架，并维护运行两年。
+\begin{itemize}
+  \item 传感器：陀螺仪、加速度计、电磁传感器、摄像头，
+  \item 电机驱动：H 桥驱动电路实现电机的正反转和速度控制，
+  \item 控制算法：PID 控制算法，对两轮平衡小车的姿态、速度以及方向的控制，
+  \item 图像算法：二值图边界判定算法，寻找赛道边界，做为小车循迹的依据，
+  \item 滤波算法：卡尔曼滤波器和平衡互补滤波器，对传感器采集数据滤波，过滤信号扰动。
+\end{itemize}
 
 % Reference Test
 %\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
@@ -65,24 +74,57 @@ xxx后端开发
 %  \item main contribution
 %\end{itemize}
 
-\section{\faCogs\ IT 技能}
+\section{\faCogs\ 工作技能}
 % increase linespacing [parsep=0.5ex]
+开发平台：
 \begin{itemize}[parsep=0.5ex]
-  \item 编程语言: C == Python > C++ > Java
-  \item 平台: Linux
-  \item 开发: xxx
+  \item 2 年单片机裸机 C 语言程序开发经验，
+  \item 3 年的 Arm64 平台 Linux 内核设备驱动软件开发经验。
+\end{itemize}
+计算机体系及操作系统原理：
+\begin{itemize}[parsep=0.5ex]
+  \item 理解冯·诺伊曼存储计算模型的原理，对 x86(64) 以及 arm 指令体系架构有简单认知，
+  \item 熟悉计算机体系结构，程序运行以及系统引导原理，对于内存管理、进程管理和线程调度、总线及存储模型、同步原语等概念有简单认知
+  \item 大学期间曾完成对《深入理解计算机系统》（CS: APP）的自学，
+  \item 2021 年完成《程序员的自我修养：链接、装载与库》大部分，并简单通读《Linux 内核完全注释》，
+\end{itemize}
+编程语言：
+\begin{itemize}[parsep=0.5ex]
+  \item 精通 C 语言程序编写，有大量 (7 年) 的编码实践，
+  \item 能读写简单的汇编程序，
+  \item 能编写简单的 bash/makefile 脚本，
+  \item 对其他多种编程语言 (Java/Python/Rust/Lisp) 等有所涉猎，
+    \item 大学本科毕业设计使用 java 实作一个基于 web 的信息管理系统
+    \item 个人练习使用 python 简单编写过文本及图片爬虫
+    \item 阅读《计算机程序的构造和解释》时学习了解过 lisp
+\end{itemize}
+算法和数据结构：
+\begin{itemize}[parsep=0.5ex]
+  \item 有算法竞赛背景，
+    \item 高中参与信息奥林匹克竞赛，获湖南省联赛金牌,
+    \item 大学参与大学生 ACM 竞赛，获山东省银牌。
+  \item 掌握简单的数据结构与算法，如队列、链表的多种结构，以及贪心算法，背包算法等，
+  \item 对各种高级数据结构和算法有简单认知，可以无障碍阅读大多数开源代码。
 \end{itemize}
 
+~\\
 \section{\faHeartO\ 获奖情况}
-\datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
-\datedline{其他奖项}{2015}
+\datedline{第十二届全国大学生“恩智浦”杯智能汽车竞赛 \textit{全国二等奖，山东省一等奖}}{2017 年}
+\datedline{“浪潮杯”山东省第七届 ACM 大学生程序设计竞赛 \textit{银牌}}{2016年}
+\datedline{中国海洋大学第七届“朗讯杯”科技实训比赛 \textit{二等奖}}{2016年}
+\datedline{中国海洋大学 2015~2016 学年 \textit{科技创新奖学金}}{2016年}
+\datedline{全国大学生数学建模竞赛 \textit{山东赛区二等奖}}{2016年}
+\datedline{全国青少年信息学奥林匹克联赛 \textit{湖南省联赛一等奖}}{2012年}
 
-\section{\faInfo\ 其他}
+~\\
+\section{\faInfo\ 其他个人情况介绍}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 技术博客: http://blog.yours.me
-  \item GitHub: https://github.com/username
-  \item 语言: 英语 - 熟练(TOEFL xxx)
+  \item 传感器、信号处理、自动控制及控制理论基础：本科自动化专业课，
+  \item 通信协议：掌握 I2C, RS232 等简单的串行通信协议，掌握 HDMI 规范的编码及通信协议，丰富的HDMI 设备问题处理经验，
+  \item 计算机网络基础：读完《TCP/IP 详解》第一卷，并在 Archlinux PC 上有一定的实践，
+  \item 热爱计算机技术，广泛涉猎一些计算机技术，学习能力强，使用 Archlinux 作为日常 PC 操作系统，能简单分析及处理 linux 系统中常见的软件问题，
+  \item 经常阅读 LWN.net 等 linux 开源社区文章，关注 linux kernel 的提交并有尝试了解感兴趣的修改提交。
 \end{itemize}
 
 %% Reference
